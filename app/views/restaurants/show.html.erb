@@ -1,4 +1,16 @@
-<h1><%= @restaurant.name %></h1>
-<p>Address: <%= @restaurant.address %></p>
-<p>Telephone number: <%= @restaurant.phone_number %></p>
-<p>Category: <%= @restaurant.category %></p>
+<div class="heading">
+  <h1><%= @restaurant.name %></h1>
+</div>
+<%= render 'nav' %>
+<div class="container">
+  <p>Address: <%= @restaurant.address %></p>
+  <p>Telephone number: <%= @restaurant.phone_number %></p>
+  <p>Category: <%= @restaurant.category %></p>
+  <div class="reviews">
+    <ul class="list-group">
+      <% @restaurant.reviews.each do |review| %>
+      <li class="list-group-item"><%= review.content %> | <%= review.rating %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

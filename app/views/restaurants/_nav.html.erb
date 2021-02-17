@@ -1,0 +1,5 @@
+<nav class="nav nav-tabs">
+  <%= link_to "See all restaurants", restaurants_path, class: "nav-link" %>
+  <%= link_to "Create a new restaurant", new_restaurant_path, class: "nav-link" %>
+  <%= link_to "Leave a review", new_restaurant_review_path(@restaurant), class: "nav-link" %>
+</nav>
